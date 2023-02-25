@@ -19,6 +19,12 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: var(--very-light-grayish-blue);
 }
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
 .notification-container {
   width: min(100%, 45.625rem);
   margin: auto;
@@ -26,9 +32,11 @@ body {
   background-color: var(--white);
 }
 .notif-head-container {
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: start;
+  gap: 0.75rem;
 }
 .notif-title {
   color: var(--very-dark-blue);
@@ -43,5 +51,41 @@ body {
   background-color: var(--blue);
 }
 .mark-read-btn {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: 500;
   margin-left: auto;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.notif-wrapper {
+  padding: 1.125rem;
+  display: flex;
+  gap: 1.25rem;
+  background-color: var(--light-grayish-blue-1);
+  border-radius: 0.45rem;
+}
+.notif-wrapper:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.notif-img-profile {
+  width: 2.875rem;
+  height: 2.875rem;
+  background-color: var(--white);
+  /* border-radius: 50%; */
+}
+.notif-profile-wrapper {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.profile-link {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+}
+.object-link {
+  color: var(--dark-grayish-blue);
+  font-weight: 800;
 }
