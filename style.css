@@ -73,7 +73,7 @@ img {
 .notif-img-profile {
   width: 2.875rem;
   height: 2.875rem;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   /* border-radius: 50%; */
 }
 .notif-profile-wrapper {
