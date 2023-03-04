@@ -3,49 +3,77 @@
     "avatar": "avatar-mark-webber.webp",
     "subject": "Mark Webber",
     "predicate": "reacted to your recent post",
-    "object": "My first tournament today!",
+    "object": {
+      "link": "My first tournament today!",
+      "img": null,
+      "pmessage": null
+    },
     "time": "1m"
   },
   {
     "avatar": "avatar-angela-gray.webp",
     "subject": "Angela Gray",
     "predicate": "followed you",
-    "object": "",
+    "object": {
+      "link": null,
+      "img": null,
+      "pmessage": null
+    },
     "time": "5m"
   },
   {
     "avatar": "avatar-jacob-thompson.webp",
     "subject": "Jacob Thompson",
     "predicate": "has joined your group",
-    "object": "Chess Club",
+    "object": {
+      "link": "Chess Club",
+      "img": null,
+      "pmessage": null
+    },
     "time": "1 day"
   },
   {
     "avatar": "avatar-rizky-hasanuddin.webp",
     "subject": "Rizky Hasanuddin",
     "predicate": "sent you a private message",
-    "object": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
+    "object": {
+      "link": null,
+      "img": null,
+      "pmessage": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game."
+    },
     "time": "5 days"
   },
   {
     "avatar": "avatar-kimberly-smith.webp",
     "subject": "Kimberly Smith",
     "predicate": "commented on your picture",
-    "object": "<img src='assets/images/image-chess.webp'/>",
+    "object": {
+      "link": null,
+      "img": "image-chess.webp",
+      "pmessage": null
+    },
     "time": "1 week"
   },
   {
     "avatar": "avatar-nathan-peterson.webp",
     "subject": "Nathan Peterson",
     "predicate": "reacted to your recent post",
-    "object": "5 end-game strategies to increase your win rate",
+    "object": {
+      "link": "5 end-game strategies to increase your win rate",
+      "img": null,
+      "pmessage": null
+    },
     "time": "2 weeks"
   },
   {
     "avatar": "avatar-anna-kim.webp",
     "subject": "Anna Kim",
     "predicate": "left the group",
-    "object": "Chess Club",
+    "object": {
+      "link": "Chess Club",
+      "img": null,
+      "pmessage": null
+    },
     "time": "2 weeks"
   }
 ]

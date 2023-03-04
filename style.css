@@ -70,7 +70,7 @@ img {
 .notif-wrapper:not(:last-child) {
   margin-bottom: 0.5rem;
 }
-.notif-img-profile {
+.notif-avatar {
   width: 2.875rem;
   height: 2.875rem;
   /* background-color: var(--white); */
@@ -81,11 +81,30 @@ img {
   font-size: 1rem;
   font-weight: 500;
 }
-.profile-link {
+.notif-info-wrapper-child {
+  display: inline;
+}
+.notif-info-wrapper-child > * {
+  display: inline-block;
+}
+.subject-name {
   color: var(--very-dark-blue);
   font-weight: 800;
 }
 .object-link {
   color: var(--dark-grayish-blue);
   font-weight: 800;
+}
+.object-img {
+  display: inline-block;
+  border: 5px solid green;
+  margin-left: auto;
+}
+.private-message {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  padding: 1.125em;
+  display: inline-block;
+  border: 0.0625rem solid var(--dark-grayish-blue);
+  border-radius: 0.5rem;
 }
