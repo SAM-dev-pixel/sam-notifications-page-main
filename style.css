@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 :root {
   --red: hsl(1, 90%, 64%);
@@ -70,6 +71,12 @@ img {
 .notif-wrapper:not(:last-child) {
   margin-bottom: 0.5rem;
 }
+[data-readed="true"] {
+  background-color: transparent;
+}
+[data-readed="true"] .notif-info-wrapper-child::after {
+  display: none;
+}
 .notif-avatar {
   width: 2.875rem;
   height: 2.875rem;
@@ -81,12 +88,19 @@ img {
   font-size: 1rem;
   font-weight: 500;
 }
-.notif-info-wrapper-child {
-  display: inline;
-}
-.notif-info-wrapper-child > * {
+.notif-info-wrapper-child::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5%;
   display: inline-block;
+  background-color: var(--red);
+  border-radius: 50%;
 }
+/* .notif-info-wrapper-child > * {
+  display: inline-block;
+} */
 .subject-name {
   color: var(--very-dark-blue);
   font-weight: 800;
@@ -97,8 +111,10 @@ img {
 }
 .object-img {
   display: inline-block;
-  border: 5px solid green;
   margin-left: auto;
+}
+.object-img img {
+  width: 2.875rem;
 }
 .private-message {
   color: var(--dark-grayish-blue);
