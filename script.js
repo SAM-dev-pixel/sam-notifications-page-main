@@ -10,7 +10,7 @@ fetch("data.json")
 
     deleteEmptyElement();
   });
-
+// fungsi untuk membuat elemen notif
 function createNotif(data) {
   return `
   <!-- start notif wrapper -->
@@ -26,7 +26,7 @@ function createNotif(data) {
                 <span class="predicate-txt">${data.predicate}</span>
                 <a href="#" class="object-link">${data.object.link}</a>
               </div>
-              <p class="notif-time">${data.time}</p>
+              <p class="notif-time">${data.time} ago</p>
               <a href="#" class="private-message"
                 >${data.object.pmessage}</a
               >
@@ -47,19 +47,19 @@ function deleteEmptyElement() {
   const privateMessage = document.querySelectorAll(".private-message");
   const objectImg = document.querySelectorAll(".object-img");
 
-  // objectLinks.forEach((link) => {
-  //   if (link.textContent == "null") link.style.display = "none";
-  // });
-  // privateMessage.forEach((pm) => {
-  //   if (pm.textContent == "null") pm.style.display = "none";
-  // });
-  // objectImg.forEach((img) => {
-  //   if (img.children[0].src.indexOf("null") !== -1) img.style.display = "none";
-  // });
-
-  for(let i = 0; i < notifWrapper.length; i++) {
-    if (objectLinks[i].textContent == "null") objectLinks[i].style.display = "none";
-    if (privateMessage[i].textContent == "null") privateMessage[i].style.display = "none";
-    if (objectImg[i].children[0].src.indexOf("null") !== -1) objectImg[i].style.display = "none";
-  }
+  objectLinks.forEach((link) => {
+    if (link.textContent == "null") link.style.display = "none";
+  });
+  privateMessage.forEach((pm) => {
+    if (pm.textContent == "null") pm.style.display = "none";
+  });
+  objectImg.forEach((img) => {
+    if (img.children[0].src.indexOf("null") !== -1) img.style.display = "none";
+  });
 }
+
+const markReadBtn = document.querySelector(".mark-read-btn");
+markReadBtn.addEventListener("click", () => {
+  const notifWrapper = document.querySelectorAll(".notif-wrapper");
+  notifWrapper.forEach((notif) => (notif.dataset.readed = true));
+});

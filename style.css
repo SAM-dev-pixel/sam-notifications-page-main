@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
 }
 :root {
   --red: hsl(1, 90%, 64%);
@@ -17,6 +16,9 @@
 }
 body {
   padding: 3.875rem 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: var(--very-light-grayish-blue);
 }
@@ -29,8 +31,10 @@ img {
 .notification-container {
   width: min(100%, 45.625rem);
   margin: auto;
-  padding: 2.25rem 1.875rem;
+  padding: 2.25rem min(5vw, 1.875rem);
   background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 .notif-head-container {
   margin-bottom: 2rem;
@@ -41,7 +45,7 @@ img {
 }
 .notif-title {
   color: var(--very-dark-blue);
-  font-size: 1.5rem;
+  font-size: min(6vw, 1.5rem);
   font-weight: 800;
 }
 .notif-amount {
@@ -78,12 +82,10 @@ img {
   display: none;
 }
 .notif-avatar {
-  width: 2.875rem;
-  height: 2.875rem;
-  /* background-color: var(--white); */
-  /* border-radius: 50%; */
+  width: min(10.8vw, 2.875rem);
+  height: min(10.8vw, 2.875rem);
 }
-.notif-profile-wrapper {
+.notif-info-wrapper-child {
   color: var(--dark-grayish-blue);
   font-size: 1rem;
   font-weight: 500;
@@ -98,9 +100,6 @@ img {
   background-color: var(--red);
   border-radius: 50%;
 }
-/* .notif-info-wrapper-child > * {
-  display: inline-block;
-} */
 .subject-name {
   color: var(--very-dark-blue);
   font-weight: 800;
@@ -109,18 +108,39 @@ img {
   color: var(--dark-grayish-blue);
   font-weight: 800;
 }
+:is(.subject-name, .object-link, .mark-read-btn):hover {
+  color: var(--blue);
+}
+.notif-time {
+  color: var(--grayish-blue);
+}
 .object-img {
   display: inline-block;
   margin-left: auto;
 }
 .object-img img {
-  width: 2.875rem;
+  width: min(10.8vw, 2.875rem);
+}
+.object-img img:hover {
+  border: 0.1875rem solid var(--grayish-blue);
+  border-radius: 0.5rem;
 }
 .private-message {
   color: var(--dark-grayish-blue);
   font-size: 1rem;
   padding: 1.125em;
+  margin-top: 0.75rem;
   display: inline-block;
   border: 0.0625rem solid var(--dark-grayish-blue);
   border-radius: 0.5rem;
+  transition: 0.25s;
+}
+.private-message:hover {
+  background-color: var(--light-grayish-blue-1);
+}
+
+@media (width <= 46.875rem) {
+  body {
+    padding: 0;
+  }
 }
