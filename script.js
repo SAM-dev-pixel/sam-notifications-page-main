@@ -9,6 +9,8 @@ fetch("data.json")
     document.querySelector(".notif-body-container").innerHTML = notif;
 
     deleteEmptyElement();
+
+    checkNotifReaded();
   });
 // fungsi untuk membuat elemen notif
 function createNotif(data) {
@@ -62,4 +64,5 @@ const markReadBtn = document.querySelector(".mark-read-btn");
 markReadBtn.addEventListener("click", () => {
   const notifWrapper = document.querySelectorAll(".notif-wrapper");
   notifWrapper.forEach((notif) => (notif.dataset.readed = true));
+  document.querySelector(".notif-amount").textContent = 0;
 });
